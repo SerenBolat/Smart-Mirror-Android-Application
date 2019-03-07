@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "244715684641",
+    "firebase_url": "https://blackmirror-76012.firebaseio.com",
+    "project_id": "blackmirror-76012",
+    "storage_bucket": "blackmirror-76012.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:244715684641:android:527f7b6231e52b8f",
+        "android_client_info": {
+          "package_name": "com.example.seren.smartmirror"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "244715684641-ikq2ikaak4c8gub3p5mf19c8iec82nih.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.seren.smartmirror",
+            "certificate_hash": "45d7e4e61d1be178e2310316263f6e18c313603c"
+          }
+        },
+        {
+          "client_id": "244715684641-ia3j12375gfup4m4fj9kss2hgrjt88e3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqyUEbHlICDFu6B3qdIeVJVQmAW6sv03U"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "244715684641-ia3j12375gfup4m4fj9kss2hgrjt88e3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

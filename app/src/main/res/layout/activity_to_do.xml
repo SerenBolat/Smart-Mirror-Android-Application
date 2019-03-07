@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ToDoActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints">
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            app:titleTextColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/textviewToDo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="124dp"
+            android:layout_marginLeft="124dp"
+            android:layout_marginTop="29dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="@string/to_do_list"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="298dp"
+            android:layout_height="91dp"
+            android:layout_below="@+id/toolbar"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="67dp"
+            android:background="@drawable/border"
+            android:orientation="vertical"
+            android:padding="11dp"
+            tools:ignore="MissingConstraints">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/txtNotes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/note"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:hint="Enter your note"
+                    android:inputType="textCapWords"
+                    android:maxLines="3"
+                    android:textSize="13dp"
+                    tools:ignore="Autofill" />
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/notesText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="58dp"
+            android:background="#ffffff"
+            android:text="   Notes   "
+            android:textSize="17sp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints" />
+
+        <ImageButton
+            android:id="@+id/calendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="325dp"
+            android:layout_marginLeft="325dp"
+            android:layout_marginTop="61dp"
+            android:onClick="datePicker"
+            android:src="@drawable/ic_calendar"
+            tools:ignore="ContentDescription,MissingConstraints" />
+
+        <TextView
+            android:id="@+id/showDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="327dp"
+            android:layout_marginLeft="327dp"
+            android:layout_marginTop="120dp"
+            android:textSize="18dp" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/addNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/calendar"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="329dp"
+            android:layout_marginLeft="329dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/add_alert"
+            app:backgroundTint="@color/common_google_signin_btn_text_dark_disabled" />
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/ScrollView01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="170dp"
+            android:background="@drawable/border"
+            tools:ignore="MissingConstraints">
+
+            <RelativeLayout
+                android:layout_width="300dp"
+                android:layout_height="74dp"
+
+                android:orientation="vertical"
+                android:padding="11dp">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/list_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:scrollbars="vertical" />
+
+
+            </RelativeLayout>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/toDoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="161dp"
+            android:background="#ffffff"
+            android:text="   To Do   "
+            android:textSize="17sp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/DoingButton"
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginLeft="307dp"
+            android:layout_marginTop="172dp"
+            android:text="Doıng"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="300dp"
+            tools:layout_editor_absoluteY="193dp" />
+
+        <Button
+            android:id="@+id/DoneButton"
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginLeft="307dp"
+            android:layout_marginTop="212dp"
+            android:text="Done"
+            tools:ignore="MissingConstraints" />
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

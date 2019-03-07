@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:titleTextColor="@android:color/white"/>
+
+    <TextView
+        android:id="@+id/textviewRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:textSize="24dp"
+        android:text="REGISTER"
+        android:textStyle="bold"
+        android:layout_alignParentLeft="true"
+        tools:ignore="RtlCompat" />
+
+    <TextView
+        android:id="@+id/nameText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textviewRegister"
+        android:layout_toLeftOf="@+id/txtName"
+        android:layout_alignParentLeft="true"
+        android:textSize="16dp"
+        android:text="Name"
+        android:layout_marginTop="9dp"
+        android:textStyle="bold"
+        tools:ignore="RtlCompat" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/txtName"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textviewRegister"
+        android:layout_alignParentRight="true">
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textviewRegister"
+            android:layout_alignParentRight="true"
+            android:layout_alignStart="@+id/txtName"
+            android:layout_alignLeft="@+id/txtName"
+            android:hint="Enter your name"
+            android:inputType="textCapWords"
+            android:maxLines="1" />
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:id="@+id/surnameText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textviewRegister"
+        android:layout_toLeftOf="@+id/txtSurname"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="59dp"
+        android:textSize="16dp"
+        android:text="Surname"
+        android:textStyle="bold"
+        tools:ignore="RtlCompat" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/txtSurname"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textviewRegister"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="49dp"
+        tools:ignore="RtlCompat">
+
+        <EditText
+            android:id="@+id/Surname"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtName"
+            android:layout_alignStart="@+id/txtSurname"
+            android:layout_alignLeft="@+id/txtSurname"
+            android:hint="Enter your surname"
+            android:inputType="textCapWords"
+            android:maxLines="1" />
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:id="@+id/emailText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textviewRegister"
+        android:layout_toLeftOf="@+id/txt_Email"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="109dp"
+        android:textSize="16dp"
+        android:text="Email"
+        android:textStyle="bold"
+        tools:ignore="RtlCompat" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/txt_Email"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textviewRegister"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="99dp"
+        tools:ignore="RtlCompat">
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/txt_Email"
+            android:hint="Enter your email"
+            android:inputType="textCapWords"
+            android:maxLines="1" />
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:id="@+id/passwordText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textviewRegister"
+        android:layout_toLeftOf="@+id/txt_Email"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="159dp"
+        android:textSize="16dp"
+        android:text="Password"
+        android:textStyle="bold"
+        tools:ignore="RtlCompat" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/txt_Password"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textviewRegister"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="149dp"
+        tools:ignore="RtlCompat">
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textviewRegister"
+            android:hint="Enter your password"
+            android:inputType="textCapWords"
+            android:maxLines="1" />
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:id="@+id/passwordImage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textviewRegister"
+        android:layout_toLeftOf="@+id/imageButton"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="259dp"
+        android:textSize="16dp"
+        android:text="Image"
+        android:textStyle="bold"
+        tools:ignore="RtlCompat" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginRight="110dp"
+        android:layout_below="@+id/textviewRegister"
+        android:layout_marginTop="219dp"
+        android:layout_alignParentRight="true"
+        android:layout_weight="1"
+        android:src="@android:drawable/ic_input_add"
+        android:onClick="btnImage"/>
+
+    <Button
+        android:id="@+id/addUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_Password"
+        android:layout_marginTop="147dp"
+        android:text="REGISTER"
+        android:onClick="createUser"
+         />
+<!--
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/txt_toDo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_Email">
+
+        <EditText
+            android:id="@+id/toDO"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="To Do"
+            android:inputType="textCapWords"
+            android:maxLines="1" />
+    </android.support.design.widget.TextInputLayout>
+    -->
+    <!--
+        <ListView
+            android:id="@+id/list_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_toDo"></ListView>
+
+        <ProgressBar
+            android:id="@+id/circular_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:theme="@style/CircularProgress"
+            android:visibility="invisible" />
+    -->
+
+</RelativeLayout>
