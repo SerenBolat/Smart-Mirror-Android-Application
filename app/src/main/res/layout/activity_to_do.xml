@@ -133,8 +133,8 @@
 
         <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/ScrollView01"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="365dp"
+            android:layout_height="100dp"
             android:layout_below="@+id/toolbar"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="170dp"
@@ -142,8 +142,8 @@
             tools:ignore="MissingConstraints">
 
             <RelativeLayout
-                android:layout_width="300dp"
-                android:layout_height="74dp"
+                android:layout_width="365dp"
+                android:layout_height="100dp"
 
                 android:orientation="vertical"
                 android:padding="11dp">
@@ -152,7 +152,7 @@
                     android:id="@+id/list_data"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
                     android:scrollbars="vertical" />
 
 
@@ -171,14 +171,14 @@
             android:textSize="17sp"
             android:textStyle="bold"
             tools:ignore="MissingConstraints" />
-
+<!--
         <Button
             android:id="@+id/DoingButton"
             android:layout_width="67dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/toolbar"
             android:layout_marginLeft="307dp"
-            android:layout_marginTop="172dp"
+            android:layout_marginTop="174dp"
             android:text="Doıng"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="300dp"
@@ -193,6 +193,113 @@
             android:layout_marginTop="212dp"
             android:text="Done"
             tools:ignore="MissingConstraints" />
+-->
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/ScrollViewDoing"
+            android:layout_width="365dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/ScrollView01"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/border"
+            tools:ignore="MissingConstraints">
+
+            <RelativeLayout
+                android:layout_width="365dp"
+                android:layout_height="100dp"
+
+                android:orientation="vertical"
+                android:padding="11dp">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/list_data_doing"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:scrollbars="vertical" />
+
+
+            </RelativeLayout>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/doingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ScrollView01"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="5dp"
+            android:background="#ffffff"
+            android:text="   Doing   "
+            android:textSize="17sp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints" />
+<!--
+        <Button
+            android:id="@+id/doneButton"
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ScrollView01"
+            android:layout_marginLeft="307dp"
+            android:layout_marginTop="15dp"
+            android:text="Done"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="300dp"
+            tools:layout_editor_absoluteY="193dp" />
+-->
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/ScrollViewDone"
+            android:layout_width="365dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/ScrollViewDoing"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/border"
+            tools:ignore="MissingConstraints">
+
+            <RelativeLayout
+                android:layout_width="365dp"
+                android:layout_height="100dp"
+
+                android:orientation="vertical"
+                android:padding="11dp">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/list_data_done"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:scrollbars="vertical" />
+
+
+            </RelativeLayout>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/doneText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ScrollViewDoing"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="5dp"
+            android:background="#ffffff"
+            android:text="   Done   "
+            android:textSize="17sp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints" />
+<!--
+        <Button
+            android:id="@+id/removeButton"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ScrollViewDoing"
+            android:layout_marginLeft="290dp"
+            android:layout_marginTop="15dp"
+            android:text="Remove"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="300dp"
+            tools:layout_editor_absoluteY="193dp" />
+            -->
     </RelativeLayout>
 
 
