@@ -161,7 +161,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void createUser(View view) {
-        User user = new User(input_name.getText().toString(), input_surname.getText().toString(), input_email.getText().toString(), input_password.getText().toString(), imagePath.toString());
+        User user = new User(input_name.getText().toString(), input_surname.getText().toString(),
+                input_email.getText().toString(), input_password.getText().toString(), imagePath.toString());
         nDatabaseReference.child("users").child(user.getEmail()).setValue(user);
         clearEditText();
 

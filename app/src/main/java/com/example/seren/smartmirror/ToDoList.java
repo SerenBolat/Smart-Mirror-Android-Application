@@ -46,6 +46,4 @@ public class ToDoList {
     public void setSituation(String situation) {
         this.situation = situation;
     }
-
-
 }

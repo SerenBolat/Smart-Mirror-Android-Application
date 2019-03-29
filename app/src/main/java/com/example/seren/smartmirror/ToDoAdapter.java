@@ -1,4 +1,5 @@
 package com.example.seren.smartmirror;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
@@ -37,7 +38,6 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.ViewHolder>
     private ItemClickListener clickListener;
     String dateofNote="";
     boolean selectDate;
-
 
     public ToDoAdapter(List<ToDoList> toDoLists, Context context,String user_mail) {
         this.toDoLists = toDoLists;
@@ -193,4 +193,6 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.ViewHolder>
         DatePickerFragment fragment = new DatePickerFragment();
         //fragment.show(((Activity)context).getFragmentManager(), "datePicker");
     }
+
 }
+
