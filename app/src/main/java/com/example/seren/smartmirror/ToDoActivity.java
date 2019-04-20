@@ -40,9 +40,9 @@ public class ToDoActivity extends AppCompatActivity
     private RecyclerView recyclerView;
     private RecyclerView recyclerViewDoing;
     private RecyclerView recyclerViewDone;
-    /*private ToDoAdapter toDoAdapter;
+    private ToDoAdapter toDoAdapter;
     private ToDoAdapter doingAdapter;
-    private  ToDoAdapter doneAdapter;*/
+    private  ToDoAdapter doneAdapter;
     private FloatingActionButton floatingActionButton;
     List<ToDoList> toDoLists;
     List<ToDoList> doingLists;
@@ -72,22 +72,22 @@ public class ToDoActivity extends AppCompatActivity
                 recyclerView.setHasFixedSize(true);
                 toDoLayoutManager = new LinearLayoutManager(ToDoActivity.this);
                 recyclerView.setLayoutManager(toDoLayoutManager);
-                //toDoAdapter = new ToDoAdapter(toDoLists,ToDoActivity.this,user_mail);
-                //recyclerView.setAdapter(toDoAdapter);
+                toDoAdapter = new ToDoAdapter(toDoLists,ToDoActivity.this,user_mail);
+                recyclerView.setAdapter(toDoAdapter);
 
                // doing
                 recyclerViewDoing.setHasFixedSize(true);
                 doingLayoutManager = new LinearLayoutManager(ToDoActivity.this);
                 recyclerViewDoing.setLayoutManager(doingLayoutManager);
-                //doingAdapter = new ToDoAdapter(doingLists,ToDoActivity.this,user_mail);
-                //recyclerViewDoing.setAdapter(toDoAdapter);
+                doingAdapter = new ToDoAdapter(doingLists,ToDoActivity.this,user_mail);
+                recyclerViewDoing.setAdapter(toDoAdapter);
 
                 //done
                 recyclerViewDone.setHasFixedSize(true);
                 doneLayoutManager = new LinearLayoutManager(ToDoActivity.this);
                 recyclerViewDone.setLayoutManager(doneLayoutManager);
-                //toDoAdapter = new ToDoAdapter(doneLists,ToDoActivity.this,user_mail);
-                //recyclerViewDone.setAdapter(toDoAdapter);
+                toDoAdapter = new ToDoAdapter(doneLists,ToDoActivity.this,user_mail);
+                recyclerViewDone.setAdapter(toDoAdapter);
             }
 
             @Override
